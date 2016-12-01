@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="cineplex.list">
+      <field name="name">cineplex list</field>
+      <field name="model">cineplex.cineplex</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="cineplex.action_window">
+      <field name="name">cineplex window</field>
+      <field name="res_model">cineplex.cineplex</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="cineplex.action_server">
+      <field name="name">cineplex server</field>
+      <field name="model_id" ref="model_cineplex_cineplex"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="cineplex" id="cineplex.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="cineplex.menu_1" parent="cineplex.menu_root"/>
+    <menuitem name="Menu 2" id="cineplex.menu_2" parent="cineplex.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="cineplex.menu_1_list" parent="cineplex.menu_1"
+              action="cineplex.action_window"/>
+    <menuitem name="Server to list" id="cineplex" parent="cineplex.menu_2"
+              action="cineplex.action_server"/>
+    -->
+  </data>
+</odoo>

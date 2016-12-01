@@ -11,7 +11,7 @@
             <sheet>
               <group>
                 <field name="name"/>
-                <field name="cp"/>
+                <field name="city_id"/>
               </group>
             </sheet>
           </form>
@@ -24,7 +24,7 @@
         <field name="arch" type="xml">
           <search>
             <field name="name"/>
-            <field name="cp"/>
+            <field name="city_id"/>
           </search>
         </field>
       </record>

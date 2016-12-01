@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
+      <record model="ir.ui.view" id="salle_form_view">
+        <field name="name">salle.form</field>
+        <field name="model">cineplex.salle</field>
+        <field name="arch" type="xml">
+          <form string="salle Form">
+            <sheet>
+              <group>
+                <field name="site_id"/>
+              </group>
+            </sheet>
+          </form>
+        </field>
+      </record>
+
+      <record model="ir.ui.view" id="salle_search_view">
+        <field name="name">salle.search</field>
+        <field name="model">cineplex.salle</field>
+        <field name="arch" type="xml">
+          <search>
+            <field name="site_id"/>
+          </search>
+        </field>
+      </record>
+
+      <record model="ir.ui.view" id="session_tree_view">
+        <field name="name">site.tree</field>
+        <field name="model">cineplex.salle</field>
+        <field name="arch" type="xml">
+          <tree string="salle Tree">
+            <field name="name"/>
+            <field name="city_id"/>
+          </tree>
+        </field>
+      </record>
+
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+        <record model="ir.actions.act_window" id="salle_list_action">
+            <field name="name">Salles</field>
+            <field name="res_model">cineplex.salle</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first salle</p>
+            </field>
+        </record>
     </data>
 </odoo>

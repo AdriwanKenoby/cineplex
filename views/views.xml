@@ -3,17 +3,20 @@
 
     <!-- top level menu: no parent -->
     <menuitem id="main_cineplex_menu" name="CinePLex"/>
+
     <!-- A first level in the left side menu is needed
          before using action= attribute -->
     <menuitem id="cineplex_menu" name="CinePLex"
               parent="main_cineplex_menu"/>
+
     <!-- the following menuitem should appear *after*
          its parent openacademy_menu and *after* its
          action course_list_action -->
-    <menuitem id="cities_menu" name="Cities" parent="cineplex_menu"
-              action="city_list_action"/>
+    <menuitem id="cities_menu" name="Cities" parent="cineplex_menu" action="city_list_action"/>
 
-    <menuitem id="sites_menu" name="Sites" parent="cineplex_menu"
-              action="site_list_action"/>
+    <menuitem id="sites_menu" name="Sites" parent="cineplex_menu" action="site_list_action"/>
+
+    <menuitem id="salles_menu" name="Salles" parent="cineplex_menu" action="salle_list_action"/>
+
   </data>
 </odoo>

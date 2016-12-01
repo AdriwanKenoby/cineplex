@@ -2,7 +2,6 @@
 <odoo>
     <data>
 
-
       <record model="ir.ui.view" id="city_form_view">
         <field name="name">city.form</field>
         <field name="model">cineplex.city</field>
@@ -29,6 +28,18 @@
         </field>
       </record>
 
+      <!-- override the automatically generated list view for courses -->
+      <record model="ir.ui.view" id="city_tree_view">
+        <field name="name">city.tree</field>
+        <field name="model">cineplex.city</field>
+        <field name="arch" type="xml">
+          <tree string="City Tree">
+            <field name="name"/>
+            <field name="cp"/>
+          </tree>
+        </field>
+      </record>
+
         <!-- window action -->
         <!--
             The following tag is an action definition for a "window action",
@@ -44,19 +55,5 @@
             </field>
         </record>
 
-        <!-- top level menu: no parent -->
-        <menuitem id="main_cineplex_menu" name="CinepLex"/>
-        <!-- A first level in the left side menu is needed
-             before using action= attribute -->
-        <menuitem id="cineplex_menu" name="CinePLex"
-                  parent="main_cineplex_menu"/>
-        <!-- the following menuitem should appear *after*
-             its parent openacademy_menu and *after* its
-             action course_list_action -->
-        <menuitem id="cities_menu" name="Cities" parent="cineplex_menu"
-                  action="city_list_action"/>
-        <!-- Full id location:
-             action="openacademy.course_list_action"
-             It is not required when it is the same module -->
     </data>
 </odoo>

@@ -31,7 +31,7 @@ class Seance(models.Model):
 
     start_date = fields.Date()
     duration = fields.Float()
-    seats = fileds.Integer()
+    seats = fields.Integer()
 
     salle_id = fields.Many2one('cineplex.salle', ondelete='set null', string='Salle', index=True)
     film_id = fields.Many2one('cineplex.film', ondelete='set null', string='Film', index=True, required=True)

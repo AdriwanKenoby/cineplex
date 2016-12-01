@@ -8,18 +8,23 @@ class City(models.Model):
     name = fields.Char(required=True)
     cp = fields.Integer(required=True)
 
+
 class Site(models.Model):
     _name = 'cineplex.site'
 
     name = fields.Char(required=True)
+    city_id = fields.Many2one('cineplex.city', ondelete='set null', string='City', index=True)
 
 class Salle(models.Model):
     _name = 'cineplex.salle'
+
+    site_id = fields.Many2one('cineplex.site', ondelete='set null', string='Site', index=True)
 
 class Film(models.Model):
     _name = 'cineplex.film'
 
     name = fields.Char(required=True)
+    seance_id = fields.Many2one('cineplex.seance', ondelete='cascade', string='Seance', index=True)
 
 class Seance(models.Model):
     _name = 'cineplex.seance'
@@ -28,9 +33,9 @@ class Seance(models.Model):
     duration = fields.Float()
     seats = fileds.Integer()
 
-    site_id = fields.Many2one('cineplex.site', ondelete='set null', string='Site', index=True)
     salle_id = fields.Many2one('cineplex.salle', ondelete='set null', string='Salle', index=True)
-    film_id = fields.Many2one('cineplex.film', ondelete='set null', string='Film', index=True)
+    film_id = fields.Many2one('cineplex.film', ondelete='set null', string='Film', index=True, required=True)
+
 # class cineplex(models.Model):
 #     _name = 'cineplex.cineplex'
 

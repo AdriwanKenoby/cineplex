@@ -2,7 +2,7 @@
   <data>
 
     <!-- top level menu: no parent -->
-    <menuitem id="main_cineplex_menu" name="CinepLex"/>
+    <menuitem id="main_cineplex_menu" name="CinePLex"/>
     <!-- A first level in the left side menu is needed
          before using action= attribute -->
     <menuitem id="cineplex_menu" name="CinePLex"

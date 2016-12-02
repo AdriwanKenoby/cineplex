@@ -23,8 +23,7 @@ class Salle(models.Model):
 class Film(models.Model):
     _name = 'cineplex.film'
 
-    name = fields.Char(required=True)
-    seance_id = fields.Many2one('cineplex.seance', ondelete='cascade', string='Seance', index=True)
+    name = fields.Char(required=True)    
 
 class Seance(models.Model):
     _name = 'cineplex.seance'

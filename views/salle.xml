@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
+
       <record model="ir.ui.view" id="salle_form_view">
         <field name="name">salle.form</field>
         <field name="model">cineplex.salle</field>
         <field name="arch" type="xml">
-          <form string="salle Form">
+          <form string="Salle Form">
             <sheet>
               <group>
                 <field name="site_id"/>
@@ -25,13 +26,13 @@
         </field>
       </record>
 
-      <record model="ir.ui.view" id="session_tree_view">
-        <field name="name">site.tree</field>
+      <!-- override the automatically generated list view for courses -->
+      <record model="ir.ui.view" id="Salle_tree_view">
+        <field name="name">salle.tree</field>
         <field name="model">cineplex.salle</field>
         <field name="arch" type="xml">
-          <tree string="salle Tree">
-            <field name="name"/>
-            <field name="city_id"/>
+          <tree string="Salle Tree">
+            <field name="site_id"/>
           </tree>
         </field>
       </record>
@@ -42,7 +43,7 @@
             that is an action opening a view or a set of views
         -->
         <record model="ir.actions.act_window" id="salle_list_action">
-            <field name="name">Salles</field>
+            <field name="name">Cities</field>
             <field name="res_model">cineplex.salle</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
@@ -50,5 +51,6 @@
                 <p class="oe_view_nocontent_create">Create the first salle</p>
             </field>
         </record>
+
     </data>
 </odoo>

@@ -16,6 +16,8 @@
 
     <menuitem id="sites_menu" name="Sites" parent="cineplex_menu" action="site_list_action"/>
 
+    <menuitem id="films_menu" name="Films" parent="cineplex_menu" action="film_list_action"/>
+
     <menuitem id="salles_menu" name="Salles" parent="cineplex_menu" action="salle_list_action"/>
 
   </data>

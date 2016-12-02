@@ -1,5 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
+
+      <record model="ir.ui.view" id="film_form_view">
+        <field name="name">film.form</field>
+        <field name="model">cineplex.film</field>
+        <field name="arch" type="xml">
+          <form string="film Form">
+            <sheet>
+              <group>
+                <field name="name"/>
+              </group>
+            </sheet>
+          </form>
+        </field>
+      </record>
+
+      <record model="ir.ui.view" id="film_search_view">
+        <field name="name">film.search</field>
+        <field name="model">cineplex.film</field>
+        <field name="arch" type="xml">
+          <search>
+            <field name="name"/>
+          </search>
+        </field>
+      </record>
+
+      <!-- override the automatically generated list view for courses -->
+      <record model="ir.ui.view" id="film_tree_view">
+        <field name="name">film.tree</field>
+        <field name="model">cineplex.film</field>
+        <field name="arch" type="xml">
+          <tree string="Film Tree">
+            <field name="name"/>
+          </tree>
+        </field>
+      </record>
+
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+        <record model="ir.actions.act_window" id="film_list_action">
+            <field name="name">Cities</field>
+            <field name="res_model">cineplex.film</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first film</p>
+            </field>
+        </record>
+
     </data>
 </odoo>

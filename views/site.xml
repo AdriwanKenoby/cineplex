@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-
+      
       <record model="ir.ui.view" id="site_form_view">
         <field name="name">site.form</field>
         <field name="model">cineplex.site</field>

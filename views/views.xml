@@ -20,5 +20,7 @@
 
     <menuitem id="salles_menu" name="Salles" parent="cineplex_menu" action="salle_list_action"/>
 
+    <menuitem id="seances_menu" name="Seances" parent="cineplex_menu" action="seance_list_action"/>
+
   </data>
 </odoo>

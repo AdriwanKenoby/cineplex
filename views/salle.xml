@@ -9,7 +9,10 @@
           <form string="Salle Form">
             <sheet>
               <group>
-                <field name="site_id"/>
+	    	<field name="name"/>	
+	    	<field name="nb_place"/>
+	    	<field name="nb_place_rest"/>
+	    	<field name="site_id"/>  
               </group>
             </sheet>
           </form>
@@ -21,8 +24,11 @@
         <field name="model">cineplex.salle</field>
         <field name="arch" type="xml">
           <search>
-            <field name="site_id"/>
-          </search>
+	    <field name="name"/>	
+	    <field name="nb_place"/>
+	    <field name="nb_place_rest"/>
+	    <field name="site_id"/>          
+	</search>
         </field>
       </record>
 
@@ -32,7 +38,10 @@
         <field name="model">cineplex.salle</field>
         <field name="arch" type="xml">
           <tree string="Salle Tree">
-            <field name="site_id"/>
+	    <field name="name"/>	
+	    <field name="nb_place"/>
+	    <field name="nb_place_rest"/>
+	    <field name="site_id"/>  
           </tree>
         </field>
       </record>
@@ -43,7 +52,7 @@
             that is an action opening a view or a set of views
         -->
         <record model="ir.actions.act_window" id="salle_list_action">
-            <field name="name">Cities</field>
+            <field name="name">Salles</field>
             <field name="res_model">cineplex.salle</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
